@@ -1,0 +1,6 @@
+turtlemodule functions:
+strlength(x)                           => Returns the length of a string representation of x
+intlength(x)                           => Returns the length of the integer part of x
+commatise(x, y=',')                    => Adds separators (default: commas) to large numbers for readability. Also compatible with the European system (x, '.')
+charranking(x, y=[' ', ',', '.'])      => Returns a tuple with all letters on a string ranked by order of appearence, from highest to lowest. y, by default whitespaces and common punctuation marks, is a list of exceptions
+
