@@ -1,11 +1,3 @@
-def turtlehelp():
-  print("\nturtlemodule functions:\n")
-  print("strlength(x)                           => Returns the length of a string representation of x")
-  print("intlength(x)                           => Returns the length of the integer part of x")
-  print("commatise(x, y=',')                    => Adds separators (default: commas) to large numbers for readability. Also compatible with the European system (x, '.')")
-  print("charranking(x, y=[' ', ',', '.'])      => Returns a tuple with all letters on a string ranked by order of appearence, from highest to lowest. y, by default whitespaces and common punctuation marks, is a list of exceptions")
-  print('')
-
 def strlength(x):
   xArray = list(str(x))
   return len(xArray)
