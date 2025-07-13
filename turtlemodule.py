@@ -6,6 +6,7 @@ def intlength(x):
   x = round(x)
   xArray = list(str(int(x)))
   return len(xArray)
+  
 def commatise(x, y = ','):
   if x >= 1e+16:
     return str(x)
@@ -17,6 +18,8 @@ def commatise(x, y = ','):
     except ValueError:
       pass
   camount = nlength // 3
+  if '-' in xlist:
+    nlength -= 1
   if nlength % 3 == 0:
     if nlength != 3:
       camount -= 1
@@ -32,7 +35,21 @@ def commatise(x, y = ','):
       xlist.insert(camount * 3 - 1, y)
       camount -= 1
   return ''.join(xlist)
-
+  
+def uncommatise(x, y = [','], z = False):
+  nonintlocs = []
+  xlist = list(x)
+  k = 0
+  while k < len(xlist):
+    if not xlist[k].isdigit() and xlist[k] in y:
+      del xlist[k]
+    else:
+      k += 1
+  ucint = ''.join(xlist)
+  if z:
+    return float(ucint)
+  else:
+    return ucint
 def charranking(x, y = [' ', ',', '.']):
   charstodate = []
   for z in x:
